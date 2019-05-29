@@ -16,6 +16,30 @@ class LaraningWaveServiceProvider extends ServiceProvider
         $this->loadTranslations();
         $this->loadViews();
         $this->publishAssets();
+        $this->registerAuth();
+    }
+
+    protected function registerAuth()
+    {
+        $this->app['config']->set(
+            'auth.guards',
+            array_merge($this->app['config']->get('auth.guards'), [
+            'wave' => [
+                'driver' => 'session',
+                'provider' => 'wave',
+            ],
+            ])
+        );
+
+        $this->app['config']->set(
+            'auth.providers',
+            array_merge($this->app['config']->get('auth.providers'), [
+            'wave' => [
+                'driver' => 'eloquent',
+                'model' => \Laraning\DAL\Models\User::class,
+            ],
+            ])
+        );
     }
 
     /**
