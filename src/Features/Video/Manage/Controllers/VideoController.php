@@ -2,7 +2,6 @@
 
 namespace Laraning\Wave\Features\Video\Manage\Controllers;
 
-use Illuminate\Http\Request;
 use Laraning\DAL\Models\Video;
 use App\Http\Controllers\Controller;
 use Laraning\Wave\Requests\Video\CreatingRequest;
@@ -28,6 +27,7 @@ class VideoController extends Controller
     public function store(CreatingRequest $request)
     {
         Video::create($request->all());
+
         return flame('Dataset', ['caption' => $request->title]);
     }
 
@@ -45,6 +45,7 @@ class VideoController extends Controller
     {
         $video->fill($request->all());
         $video->save();
+
         return flame('Dataset', ['caption' => $request->title]);
     }
 

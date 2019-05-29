@@ -45,7 +45,7 @@ class UserInterfaceServiceProvider extends ServiceProvider
 
                 $view->with('models', $models)
                      ->with('model', $models->count() > 0 ? $models->first() : null);
-            };
+            }
         });
     }
 

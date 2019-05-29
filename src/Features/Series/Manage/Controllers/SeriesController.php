@@ -2,7 +2,6 @@
 
 namespace Laraning\Wave\Features\Series\Manage\Controllers;
 
-use Illuminate\Http\Request;
 use Laraning\DAL\Models\Series;
 use App\Http\Controllers\Controller;
 use Laraning\Wave\Requests\Series\CreatingRequest;
@@ -28,6 +27,7 @@ class SeriesController extends Controller
     public function store(CreatingRequest $request)
     {
         Series::create($request->all());
+
         return flame('Dataset', ['caption' => $request->title]);
     }
 
@@ -45,6 +45,7 @@ class SeriesController extends Controller
     {
         $series->fill($request->all());
         $series->save();
+
         return flame('Dataset', ['caption' => $request->title]);
     }
 

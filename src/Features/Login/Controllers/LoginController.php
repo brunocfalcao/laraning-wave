@@ -55,7 +55,7 @@ class LoginController extends Controller
             return redirect()->intended(route('wave.home'));
         } else {
             throw ValidationException::withMessages([
-                'email' => [trans('auth.failed')]]);
+                'email' => [trans('auth.failed')], ]);
         }
     }
 }
