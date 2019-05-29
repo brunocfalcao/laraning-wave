@@ -38,7 +38,7 @@ class VideoPublished extends Notification
 
     public function toPostmark($notifiable)
     {
-        return null;
+        return;
         send_email_via_postmark(
             'bruno.falcao@laraning.com',
             'Bruno Falcão',
@@ -46,15 +46,15 @@ class VideoPublished extends Notification
             'New video tutorial published',
             'website::notifications.templates.simple',
             [
-                'image'    => url('/') . '/assets/website/images/emails/templates/simple/new-video-tutorial.png',
+                'image'    => url('/').'/assets/website/images/emails/templates/simple/new-video-tutorial.png',
                 'name'     => $notifiable->name,
-                'header'   => 'Hi '. $notifiable->name,
+                'header'   => 'Hi '.$notifiable->name,
                 'baseline' => 'You have a new video tutorial',
                 'body'     => $this->video->title,
                 'button'   => ['title' => 'Watch this video', 'link' => route('videos.show', ['video' => $this->video->link_slug])],
                 'subject'  => 'New video tutorial published!',
             ],
-            'Video Tutorial Notification - ' . $this->video->title,
+            'Video Tutorial Notification - '.$this->video->title,
             null
         );
     }

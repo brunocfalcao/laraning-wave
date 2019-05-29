@@ -1,8 +1,6 @@
 <?php
 
-use Laraning\DAL\Models\Video;
 use Illuminate\Support\Facades\Auth;
-use Laraning\Wave\Notifications\VideoTutorialPublished;
 
 Route::redirect('/', '/wave/login');
 
@@ -14,10 +12,11 @@ Route::post('login', 'Features\Login\Controllers\LoginController@login');
 Route::get('logout', function () {
     Auth::guard('wave')->logout();
     session()->invalidate();
+
     return redirect('/wave');
 });
 
-/** Super admin operations ACL **/
+/* Super admin operations ACL **/
 Route::group(['middleware' => ['wave.role:super-admin']], function () {
     Route::get('home', 'Features\Home\Controllers\HomeController@index')
        ->name('wave.home');

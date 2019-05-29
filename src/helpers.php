@@ -1,6 +1,6 @@
 <?php
 
-if (!function_exists('wave_resource_prefix')) {
+if (! function_exists('wave_resource_prefix')) {
     function wave_resource_prefix($controller)
     {
         return  [
@@ -10,12 +10,12 @@ if (!function_exists('wave_resource_prefix')) {
             'store' => "wave.{$controller}.store",
             'edit' => "wave.{$controller}.edit",
             'update' => "wave.{$controller}.update",
-            'destroy' => "wave.{$controller}.destroy"
+            'destroy' => "wave.{$controller}.destroy",
         ];
     }
-};
+}
 
-if (!function_exists('image')) {
+if (! function_exists('image')) {
 
     /**
      * Returns an URL for a model image filename.
@@ -27,7 +27,7 @@ if (!function_exists('image')) {
     function image(string $filename, string $suffix = null, string $baseFolder = 'wave/images')
     {
         // Needs to search for the right image, given the respective extension.
-        list($basename, $extension) = explode('.', $filename);
+        [$basename, $extension] = explode('.', $filename);
         if ($suffix != null) {
             $suffix = "_{$suffix}";
         }

@@ -23,6 +23,7 @@ class FeatureController extends Controller
     {
         // Publish a video for testing.
         Video::find($request->id)->publish(VideoPublished::class);
+
         return flame();
     }
 }

@@ -2,8 +2,8 @@
 
 namespace Laraning\Wave\Features\Series\Manage\Controllers;
 
-use App\Http\Controllers\Controller;
 use Laraning\DAL\Models\Series;
+use App\Http\Controllers\Controller;
 
 class DatagridController extends Controller
 {

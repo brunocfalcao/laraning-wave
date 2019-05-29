@@ -3,7 +3,6 @@
 namespace Laraning\Wave\Controllers;
 
 use App\Http\Controllers\Controller;
-use Laraning\DAL\Services\ImageServices;
 
 class Wysiwyg extends Controller
 {
@@ -17,10 +16,10 @@ class Wysiwyg extends Controller
         $conditions = collect([
             request()->hasFile('file'),
             request()->has('_token'),
-            request()->has('id')
+            request()->has('id'),
         ]);
 
-        if (!$conditions->are(true)) {
+        if (! $conditions->are(true)) {
             return response()->json(['error' =>'No file uploaded. Conditions not met.']);
         }
 
