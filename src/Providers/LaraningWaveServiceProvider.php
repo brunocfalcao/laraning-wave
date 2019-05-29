@@ -16,7 +16,6 @@ class LaraningWaveServiceProvider extends ServiceProvider
         $this->loadTranslations();
         $this->loadViews();
         $this->publishAssets();
-        $this->registerAuth();
     }
 
     protected function registerAuth()
@@ -51,6 +50,7 @@ class LaraningWaveServiceProvider extends ServiceProvider
     {
         $this->app->register(\Laraning\Wave\Providers\RouteServiceProvider::class);
         $this->app->register(\Laraning\Wave\Providers\UserInterfaceServiceProvider::class);
+        $this->registerAuth();
     }
 
     public function loadTranslations()
