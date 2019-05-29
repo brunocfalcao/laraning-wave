@@ -2,8 +2,8 @@
 
 namespace Laraning\Wave\Features\Home\Controllers;
 
-use Illuminate\Support\Carbon;
 use Laraning\DAL\Models\User;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
@@ -26,11 +26,11 @@ class CardSimpleController extends Controller
 
         // Create dates collection (keys = dates).
         $segment = date_range($start, $end, true);
-        $totals = array();
+        $totals = [];
 
         // Populate dateRange collection with the values from the results.
         $segment->transform(function ($item, $key) use ($results) {
-            return !is_null($results->get($key)) ? $results->get($key) : 0;
+            return ! is_null($results->get($key)) ? $results->get($key) : 0;
         });
 
         // Create final date segment on $total
@@ -46,6 +46,6 @@ class CardSimpleController extends Controller
                 'total' => User::all()->count(),
                 'class' => 'fa fa-users',
                 'labels' => $labels,
-                'values' => $values];
+                'values' => $values, ];
     }
 }

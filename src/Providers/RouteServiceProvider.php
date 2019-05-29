@@ -2,7 +2,6 @@
 
 namespace Laraning\Wave\Providers;
 
-use Spatie\Csp\AddCspHeaders;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 

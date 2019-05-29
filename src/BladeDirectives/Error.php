@@ -10,7 +10,7 @@ class Error
 
     public function __construct(string $errorsBag = null, $field = null, $class = 'invalid-feedback')
     {
-        list($this->errorsBag, $this->field, $this->class) = [collect(json_decode($errorsBag)), $field, $class];
+        [$this->errorsBag, $this->field, $this->class] = [collect(json_decode($errorsBag)), $field, $class];
     }
 
     /**

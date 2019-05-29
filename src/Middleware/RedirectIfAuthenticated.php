@@ -20,7 +20,7 @@ class RedirectIfAuthenticated
         if (Auth::guard('wave')->check()) {
             return redirect()->guest(route('wave.home'));
             //return redirect(route('wave.home'));
-        };
+        }
 
         return $next($request);
     }

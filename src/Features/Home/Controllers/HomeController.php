@@ -2,7 +2,6 @@
 
 namespace Laraning\Wave\Features\Home\Controllers;
 
-use Laraning\DAL\Models\Series;
 use App\Http\Controllers\Controller;
 
 class HomeController extends Controller

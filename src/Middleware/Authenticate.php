@@ -4,8 +4,6 @@ namespace Laraning\Wave\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Auth\AuthenticationException;
-use \LogicException;
 
 class Authenticate
 {
