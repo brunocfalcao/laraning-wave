@@ -18,9 +18,9 @@
 </header>
 <div class="app-body">
     {{-- Sidebar component --}}
-    @component('library::Elements.Home.Sidebar')
+    @twinkle('library::Elements.Home.Sidebar')
     <main class="main">
-        @component('library::Elements.Home.Breadcrumb')
+        @twinkle('library::Elements.Home.Breadcrumb')
         <div class="container-fluid">
             @yield('home.body')
         </div>
@@ -28,5 +28,5 @@
 </div>
 @endsection
 @section('layout.footer')
-    @component('library::Elements.Home.Footer')
+    @twinkle('library::Elements.Home.Footer')
 @endsection
