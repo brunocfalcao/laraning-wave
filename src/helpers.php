@@ -68,7 +68,7 @@ if (! function_exists('date_range')) {
     }
 }
 
-if (!function_exists('get_uri_collection_without_bindings')) {
+if (! function_exists('get_uri_collection_without_bindings')) {
     /**
      * Gets the uri collection without bindings.
      *
@@ -87,7 +87,7 @@ if (!function_exists('get_uri_collection_without_bindings')) {
     }
 }
 
-if (!function_exists('get_uri_collection')) {
+if (! function_exists('get_uri_collection')) {
     /**
      * Gets the uri collection (segments).
      *
