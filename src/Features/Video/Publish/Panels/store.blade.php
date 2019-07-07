@@ -4,7 +4,7 @@
 <div class="animated fadeIn">
     <div class="row">
         <div class="col-sm-8 col-lg-6">
-            @component('Done')
+            @twinkle('Done')
         </div>
     </div>
 </div>

@@ -4,7 +4,7 @@
 <div class="animated fadeIn">
     <div class="row">
         <div class="col-sm-12 col-lg-12">
-            @component('Datagrid', ['caption' => empty($caption) ? '' : $caption])
+            @twinkle('Datagrid', ['caption' => empty($caption) ? '' : $caption])
         </div>
     </div>
 </div>

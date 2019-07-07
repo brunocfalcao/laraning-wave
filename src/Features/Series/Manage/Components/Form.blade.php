@@ -11,21 +11,21 @@
     <div class="form-group row">
         <label class="col-md-3 col-form-label" for="hf-password">Short Description</label>
         <div class="col-md-9">
-            @component('library::Elements.Editors.Froala', ['field_name' => 'description_short', 'content' => old('description_short', optional($model)->description_short)])
+            @twinkle('library::Elements.Editors.Froala', ['field_name' => 'description_short', 'content' => old('description_short', optional($model)->description_short)])
             @error($errors, 'description_short')
         </div>
     </div>
     <div class="form-group row">
         <label class="col-md-3 col-form-label" for="hf-password">Long Description</label>
         <div class="col-md-9">
-            @component('library::Elements.Editors.Froala', ['field_name' => 'description_long', 'content' => old('description_long', optional($model)->description_long)])
+            @twinkle('library::Elements.Editors.Froala', ['field_name' => 'description_long', 'content' => old('description_long', optional($model)->description_long)])
             @error($errors, 'description_long')
         </div>
     </div>
     <div class="form-group row">
         <label class="col-md-3 col-form-label" for="hf-password">Type</label>
         <div class="col-md-9">
-            @component('library::Elements.Forms.Inputs.DropdownList', ['data' => ['sequenced' => 'Course', 'non sequenced' => 'Series'], 'name' => 'series_type'])
+            @twinkle('library::Elements.Forms.Inputs.DropdownList', ['data' => ['sequenced' => 'Course', 'non sequenced' => 'Series'], 'name' => 'series_type'])
             @error($errors, 'series_type')
         </div>
     </div>

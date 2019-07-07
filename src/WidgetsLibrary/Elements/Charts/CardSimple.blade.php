@@ -4,10 +4,10 @@
 <div class="card text-white bg-primary">
     <div class="card-body pb-0">
         <div class="btn-group float-right">
-            <i class="{{ $class or 'fa fa-heart' }}" style="font-size: 3rem"></i>
+            <i class="{{ $class ?? 'fa fa-heart' }}" style="font-size: 3rem"></i>
         </div>
-        <h4 class="mb-0">{{ $total or '' }}</h4>
-        <p>{{ $title or '' }}</p>
+        <h4 class="mb-0">{{ $total ?? '' }}</h4>
+        <p>{{ $title ?? '' }}</p>
     </div>
     <div class="chart-wrapper px-3" style="height:90px;">
         <canvas id="{{ $chartId }}" class="chart" height="90"></canvas>

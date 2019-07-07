@@ -4,7 +4,7 @@
     <div class="form-group row">
         <label class="col-md-3 col-form-label" for="hf-password">Type</label>
         <div class="col-md-9">
-            @component('library::Elements.Forms.Inputs.DropdownList', ['data' => $videos, 'name' => 'id'])
+            @twinkle('library::Elements.Forms.Inputs.DropdownList', ['data' => $videos, 'name' => 'id'])
             @error($errors, 'id')
         </div>
     </div>

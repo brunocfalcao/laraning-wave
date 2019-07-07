@@ -12,7 +12,7 @@
 
 @section('card.body')
         <div class="mb-1rem">
-            <a href="{{ route(data_get($routes, 'create.name')) }}" class="btn btn-warning"><i class="fa fa-plus-circle"></i>&nbsp; {{ $button or 'Create new' }}</a>
+            <a href="{{ route(data_get($routes, 'create.name')) }}" class="btn btn-warning"><i class="fa fa-plus-circle"></i>&nbsp; {{ $button ?? 'Create new' }}</a>
         </div>
 
         @if($data->count() > 0)

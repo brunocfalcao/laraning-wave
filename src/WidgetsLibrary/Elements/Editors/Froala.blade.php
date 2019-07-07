@@ -1,4 +1,4 @@
-<textarea class="froala" name="{{ $field_name }}">{{ $content or '' }}</textarea>
+<textarea class="froala" name="{{ $field_name }}">{{ $content ?? '' }}</textarea>
 
 @pushonce('css.additional')
 <link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.5/css/froala_editor.min.css' rel='stylesheet' type='text/css' />

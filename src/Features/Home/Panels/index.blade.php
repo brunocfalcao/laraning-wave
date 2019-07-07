@@ -4,7 +4,7 @@
 <div class="animated fadeIn">
     <div class="row">
         <div class="col-sm-6 col-lg-3">
-            @component('library::Elements.Charts.CardSimple')
+            @twinkle('library::Elements.Charts.CardSimple')
         </div>
     </div>
 </div>
