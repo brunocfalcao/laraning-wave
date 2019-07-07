@@ -39,7 +39,7 @@ if (! function_exists('image')) {
     }
 }
 
-if (!function_exists('date_range')) {
+if (! function_exists('date_range')) {
     /**
      * Returns a days range collection between 2 Carbon dates.
      *
