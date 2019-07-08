@@ -20,7 +20,6 @@
     "require": {
         "php": "^7.2",
         "illuminate/support": "~5.8.0",
-        "thomaswelton/laravel-gravatar": "^1.0",
         "spatie/laravel-permission": "^2.0",
         "brunocfalcao/flame":"^1.0",
         "thomaswelton/laravel-gravatar": "^1.1",
