@@ -4,9 +4,11 @@
             <li class="nav-title">
                 Admin Features
             </li>
+            @if(Route::has('terminal.index'))
             <li class="nav-item">
                 <a href="{{ route('terminal.index') }}" class="nav-link" target="_new"><i class="icon-drop"></i> Terminal</a>
             </li>
+            @endif
             <li class="nav-item nav-dropdown">
                 <a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-video-camera"></i> Videos</a>
                 <ul class="nav-dropdown-items">
