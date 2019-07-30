@@ -24,7 +24,8 @@
         "brunocfalcao/flame":"^1.0",
         "thomaswelton/laravel-gravatar": "^1.1",
         "wildbit/postmark-php": "^2.6",
-        "recca0120/terminal": "^1.6"
+        "recca0120/terminal": "^1.6",
+        "image/intervention": "^2.5"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.0"

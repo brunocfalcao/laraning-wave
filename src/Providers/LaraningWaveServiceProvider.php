@@ -2,6 +2,7 @@
 
 namespace Laraning\Wave\Providers;
 
+use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider;
 
 class LaraningWaveServiceProvider extends ServiceProvider
@@ -16,6 +17,19 @@ class LaraningWaveServiceProvider extends ServiceProvider
         $this->loadTranslations();
         $this->loadViews();
         $this->publishAssets();
+        $this->registerMacros();
+    }
+
+    protected function registerMacros()
+    {
+        // Include all files from the Macros folder.
+        Collection::make(glob(__DIR__.'/../Macros/*.php'))
+                  ->mapWithKeys(function ($path) {
+                      return [$path => pathinfo($path, PATHINFO_FILENAME)];
+                  })
+                  ->each(function ($macro, $path) {
+                      require_once $path;
+                  });
     }
 
     protected function registerAuth()
