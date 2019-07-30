@@ -6,11 +6,11 @@ use Intervention\Image\Facades\Image;
 
 // Sets the image initial attributes.
 UploadedFile::macro('set', function () {
-    if (!isset($this->image)) {
+    if (! isset($this->image)) {
         $this->reload();
     }
 
-    if (!isset($this->filename)) {
+    if (! isset($this->filename)) {
         $this->filename = $this->hashName();
         $this->basename = collect(explode('.', $this->filename))->first();
         $this->extension = collect(explode('.', $this->filename))->last();
@@ -33,11 +33,11 @@ UploadedFile::macro('reload', function () {
 UploadedFile::macro('resize', function ($width = null, $height = null) {
     $this->set();
 
-    if (!is_null($width)) {
+    if (! is_null($width)) {
         $this->targetWidth = $width;
     }
 
-    if (!is_null($height)) {
+    if (! is_null($height)) {
         $this->targetWidth = $height;
     }
 
