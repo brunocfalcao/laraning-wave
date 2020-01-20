@@ -10,25 +10,25 @@ class BreadcrumbController extends Controller
     public function default()
     {
         return ['breadcrumbs' => [
-                    ['link' => route('wave.videos.index'), 'caption' => 'Videos'],
-                    ['caption' => 'Manage'],
-            ]];
+            ['link' => route('wave.videos.index'), 'caption' => 'Videos'],
+            ['caption' => 'Manage'],
+        ]];
     }
 
     public function create()
     {
         return ['breadcrumbs' => [
-                    ['link' => route('wave.videos.index'), 'caption' => 'Videos'],
-                    ['caption' => 'Create'],
-            ]];
+            ['link' => route('wave.videos.index'), 'caption' => 'Videos'],
+            ['caption' => 'Create'],
+        ]];
     }
 
     public function edit(Video $video)
     {
         return ['breadcrumbs' => [
-                    ['link' => route('wave.videos.index'), 'caption' => 'Videos'],
-                    ['caption' => 'Edit'],
-                    ['caption' => $video->title],
-            ]];
+            ['link' => route('wave.videos.index'), 'caption' => 'Videos'],
+            ['caption' => 'Edit'],
+            ['caption' => $video->title],
+        ]];
     }
 }
