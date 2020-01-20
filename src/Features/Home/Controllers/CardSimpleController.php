@@ -43,9 +43,9 @@ class CardSimpleController extends Controller
         $values = collect($totals)->values()->toArray();
 
         return ['title' => 'Total Users',
-                'total' => User::all()->count(),
-                'class' => 'fa fa-users',
-                'labels' => $labels,
-                'values' => $values, ];
+            'total' => User::all()->count(),
+            'class' => 'fa fa-users',
+            'labels' => $labels,
+            'values' => $values, ];
     }
 }

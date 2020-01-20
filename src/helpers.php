@@ -50,7 +50,7 @@ if (! function_exists('date_range')) {
      *
      * @return Collection Date range collection.
      */
-    function date_range(Carbon $start_date, Carbon $end_date, $onKeys = false, $format = 'Y-m-d') : Collection
+    function date_range(Carbon $start_date, Carbon $end_date, $onKeys = false, $format = 'Y-m-d'): Collection
     {
         $dates = [];
         $sd = $start_date->copy();
