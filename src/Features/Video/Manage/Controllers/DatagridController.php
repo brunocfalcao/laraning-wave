@@ -2,8 +2,8 @@
 
 namespace Laraning\Wave\Features\Video\Manage\Controllers;
 
-use Laraning\DAL\Models\Video;
 use App\Http\Controllers\Controller;
+use Laraning\DAL\Models\Video;
 
 class DatagridController extends Controller
 {

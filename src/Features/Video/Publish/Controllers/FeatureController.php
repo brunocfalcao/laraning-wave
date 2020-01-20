@@ -2,9 +2,9 @@
 
 namespace Laraning\Wave\Features\Video\Publish\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Laraning\DAL\Models\Video;
-use App\Http\Controllers\Controller;
 use Laraning\Wave\Notifications\VideoPublished;
 
 class FeatureController extends Controller

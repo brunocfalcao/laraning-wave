@@ -2,10 +2,10 @@
 
 namespace Laraning\Wave\Features\Home\Controllers;
 
-use Laraning\DAL\Models\User;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\Controller;
+use Laraning\DAL\Models\User;
 
 class CardSimpleController extends Controller
 {

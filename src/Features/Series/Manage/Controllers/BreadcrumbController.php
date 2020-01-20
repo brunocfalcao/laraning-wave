@@ -2,8 +2,8 @@
 
 namespace Laraning\Wave\Features\Series\Manage\Controllers;
 
-use Laraning\DAL\Models\Series;
 use App\Http\Controllers\Controller;
+use Laraning\DAL\Models\Series;
 
 class BreadcrumbController extends Controller
 {

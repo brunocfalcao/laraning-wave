@@ -3,10 +3,10 @@
 namespace Laraning\Wave\Notifications;
 
 use Illuminate\Bus\Queueable;
-use Laraning\DAL\Models\Video;
-use Illuminate\Notifications\Notification;
-use Laraning\Website\Channels\PostmarkChannel;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Notification;
+use Laraning\DAL\Models\Video;
+use Laraning\Website\Channels\PostmarkChannel;
 
 class VideoPublished extends Notification
 {
